@@ -1,4 +1,4 @@
-﻿namespace MTGVault.Data;
+﻿namespace MTGVault.Data.Scryfall.Cards;
 
 public class MtgCard
 {
@@ -16,7 +16,7 @@ public class MtgCard
     public string Layout { get; set; }
     public bool Highres_Image { get; set; }
     public string Image_Status { get; set; }
-    public Image_Uris Image_Uris { get; set; }
+    public CardImage_Uris Image_Uris { get; set; }
     public string ManaCost { get; set; }
     public float Cmc { get; set; }
     public string Type_Line { get; set; }
@@ -26,7 +26,7 @@ public class MtgCard
     public List<string> Colors { get; set; }
     public List<string> Color_Identity { get; set; }
     public List<string> Keywords { get; set; }
-    public Formats Legalities { get; set; }
+    public CardFormats Legalities { get; set; }
     public List<string> Games { get; set; }
     public bool Reserved { get; set; }
     public bool Foil { get; set; }
@@ -65,5 +65,5 @@ public class MtgCard
     public CardPreview Preview { get; set; }
     public CardPrices Prices { get; set; }
     public CardRelatedUris Related_Uris { get; set; }
-    public CardPurchaseUris Purchase_Uris { get; set;}
+    public CardPurchaseUris Purchase_Uris { get; set; }
 }

@@ -1,6 +1,7 @@
-﻿using RestSharp;
+﻿using MTGVault.Data.Scryfall.Cards;
+using RestSharp;
 
-namespace MTGVault.Data;
+namespace MTGVault.Data.Services;
 
 public class ScryfallService
 {

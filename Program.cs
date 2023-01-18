@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using MTGVault.Data;
+using MTGVault.Data.Services;
 
 namespace MTGVault
 {

@@ -1,4 +1,4 @@
-namespace MTGVault.Data
+namespace MTGVault.Data.Services
 {
     public class WeatherForecastService
     {

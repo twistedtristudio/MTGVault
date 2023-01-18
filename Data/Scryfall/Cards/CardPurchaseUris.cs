@@ -1,4 +1,4 @@
-﻿namespace MTGVault.Data;
+﻿namespace MTGVault.Data.Scryfall.Cards;
 
 public class CardPurchaseUris
 {

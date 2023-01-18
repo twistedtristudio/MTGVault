@@ -13,4 +13,16 @@
     <PackageReference Include="RestSharp" Version="108.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\Scryfall\Lists\" />
+    <Folder Include="Data\Scryfall\CardSymbols\" />
+    <Folder Include="Data\Scryfall\Catalogs\" />
+    <Folder Include="Data\Scryfall\BulkData\" />
+    <Folder Include="Data\Scryfall\CardMigrations\" />
+    <Folder Include="Data\Scryfall\Applications\" />
+    <Folder Include="Data\Scryfall\Errors\" />
+    <Folder Include="Data\Scryfall\Rulings\" />
+    <Folder Include="Data\Scryfall\Sets\" />
+  </ItemGroup>
+
 </Project>

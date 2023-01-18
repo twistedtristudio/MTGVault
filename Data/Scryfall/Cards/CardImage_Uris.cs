@@ -1,6 +1,6 @@
-﻿namespace MTGVault.Data;
+﻿namespace MTGVault.Data.Scryfall.Cards;
 
-public class Image_Uris
+public class CardImage_Uris
 {
     public string Small { get; set; }
     public string Normal { get; set; }

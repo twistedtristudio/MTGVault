@@ -1,6 +1,6 @@
-﻿namespace MTGVault.Data;
+﻿namespace MTGVault.Data.Scryfall.Cards;
 
-public class Formats
+public class CardFormats
 {
     public string Standard { get; set; }
     public string Future { get; set; }
