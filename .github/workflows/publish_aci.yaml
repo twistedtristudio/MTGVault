@@ -19,19 +19,19 @@ jobs:
         - name: 'Build & Push'
           uses: azure/docker-login@v1
           with:
-            login-server: mtgvault.azurecr.io
+            login-server: ${{ secrets.ACR_ENDPOINT }}
             username: ${{ secrets.AZURE_USERNAME }}
             password: ${{ secrets.AZURE_PASSWORD }}
         - run: |
-            docker build . -t mtgvault:${{ github.sha }}
-            docker tag mtgvault:${{ github.sha }} mtgvault.azurecr.io/mtgvault:${{ github.sha }}
-            docker push mtgvault.azurecr.io/mtgvault:${{ github.sha }}
+            docker build . -t ${{ vars.DKR_IMG_NAME }}:${{ github.sha }}
+            docker tag ${{ vars.DKR_IMG_NAME }}:${{ github.sha }} ${{ secrets.ACR_ENDPOINT }}/${{ vars.DKR_IMG_NAME }}:${{ github.sha }}
+            docker push ${{ secrets.ACR_ENDPOINT }}/${{ vars.DKR_IMG_NAME }}:${{ github.sha }}
         - name: 'Deploy to Azure Container Instances'
           uses: 'azure/aci-deploy@v1'
           with:
-            resource-group: TwistedTri-MTG
-            dns-name-label: mtgvault
-            image: mtgvault.azurecr.io/mtgvault:${{ github.sha }}
+            resource-group: ${{ secrets.AZ_RESOURCE_GROUP }}
+            dns-name-label: ${{ serets.AZ_DNS_NAME_LABEL }}
+            image: ${{ secrets.ACR_ENDPOINT }}/${{ vars.DKR_IMG_NAME }}:${{ github.sha }}
             cpu: 1
             memory: 1
             registry-username: ${{ secrets.AZURE_USERNAME }}
