@@ -14,6 +14,7 @@ namespace MTGVault
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
             builder.Services.AddSingleton<WeatherForecastService>();
+            builder.Services.AddSingleton<ScryfallService>();
 
             var app = builder.Build();
 

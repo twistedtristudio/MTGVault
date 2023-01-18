@@ -1,0 +1,33 @@
+﻿@page "/scryfall/random"
+@using MTGVault.Data
+@inject ScryfallService Scryfall
+
+<PageTitle>Scryfall Random Card</PageTitle>
+
+<h3>Scryfall Random Card</h3>
+
+<div>
+    <button class="btn btn-primary" @onclick="GetRandomCard">Random Card</button>
+</div>
+
+<div>
+    @if (card == null)
+    {
+
+    }
+    else
+    {
+        <img src="@card.Image_Uris.Normal" />
+    }
+</div>
+
+@code {
+
+    private MtgCard? card;
+
+    private async Task GetRandomCard()
+    {
+        card = await Scryfall.GetRandomCard();
+    }
+
+}
