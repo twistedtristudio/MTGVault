@@ -1,0 +1,69 @@
+﻿namespace MTGVault.Data;
+
+public class MtgCard
+{
+    public string Object { get; set; }
+    public Guid Id { get; set; }
+    public Guid Oracle_Id { get; set; }
+    public List<int> Multiverse_Ids { get; set; }
+    public int TcgPlayer_Etched_Id { get; set; }
+    public int CardMarket_Id { get; set; }
+    public string Name { get; set; }
+    public string Lang { get; set; }
+    public DateOnly Released_At { get; set; }
+    public string Uri { get; set; }
+    public string Scryfall_Uri { get; set; }
+    public string Layout { get; set; }
+    public bool Highres_Image { get; set; }
+    public string Image_Status { get; set; }
+    public Image_Uris Image_Uris { get; set; }
+    public string ManaCost { get; set; }
+    public float Cmc { get; set; }
+    public string Type_Line { get; set; }
+    public string Oracle_Text { get; set; }
+    public string Power { get; set; }
+    public string Toughness { get; set; }
+    public List<string> Colors { get; set; }
+    public List<string> Color_Identity { get; set; }
+    public List<string> Keywords { get; set; }
+    public Formats Legalities { get; set; }
+    public List<string> Games { get; set; }
+    public bool Reserved { get; set; }
+    public bool Foil { get; set; }
+    public bool NonFoil { get; set; }
+    public List<string> Finishes { get; set; }
+    public bool Oversized { get; set; }
+    public bool Promo { get; set; }
+    public bool Reprint { get; set; }
+    public bool Variation { get; set; }
+    public Guid Set_Id { get; set; }
+    public string Set { get; set; }
+    public string Set_Name { get; set; }
+    public string Set_Type { get; set; }
+    public string Set_Uri { get; set; }
+    public string Set_Search_Uri { get; set; }
+    public string Scryfall_Set_Uri { get; set; }
+    public string Rulings_Uri { get; set; }
+    public string Prints_Search_Uri { get; set; }
+    public string Collector_Number { get; set; }
+    public bool Digital { get; set; }
+    public string Rarity { get; set; }
+    public Guid Card_Back_Id { get; set; }
+    public string Artist { get; set; }
+    public List<Guid> Artist_Ids { get; set; }
+    public Guid Illustration_Id { get; set; }
+    public string Border_Color { get; set; }
+    public string Frame { get; set; }
+    public List<string> Frame_Effects { get; set; }
+    public string Security_Stamp { get; set; }
+    public bool Full_Art { get; set; }
+    public bool Textless { get; set; }
+    public bool Booseter { get; set; }
+    public bool Story_Spotlight { get; set; }
+    public List<string> Promo_Types { get; set; }
+    public int Edhrec_Rank { get; set; }
+    public CardPreview Preview { get; set; }
+    public CardPrices Prices { get; set; }
+    public CardRelatedUris Related_Uris { get; set; }
+    public CardPurchaseUris Purchase_Uris { get; set;}
+}
